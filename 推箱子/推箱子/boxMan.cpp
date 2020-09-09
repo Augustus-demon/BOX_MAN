@@ -62,7 +62,7 @@ void gameControl(enum _DIRECTION direct){
 		}
 		else {
 			if (map[man.x][man.y] == MAN) {
-				changemap(&next_pos, MAN);//传入指针以节约空间
+				changemap(&next_pos, MAN);
 				changemap(&man, FLOOR);
 				man = next_pos;
 			}
