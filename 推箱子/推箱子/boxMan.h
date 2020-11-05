@@ -2,8 +2,10 @@
 #ifndef __BOXMAN_H__
 #define __BOXMAN_H__
 
-#define ROW 9
-#define COLUMN 12
+#include <graphics.h>
+
+//#define ROW 48
+//#define COLUMN 48
 
 #define GRAPH_WIDTH 790  
 #define GRAPH_HEIGHT 608
@@ -21,12 +23,14 @@
 
 #define isValid(posi) (posi.x >= 0) && (posi.x < ROW) && (posi.y >= 0) && (posi.y < COLUMN)
 
+#define MAX_RETRY_TIME 5
+
 enum _ISO {
-	BOX,
-	DES,
-	FLOOR,
-	MAN,
 	WALL,
+	FLOOR,
+	DES,
+	MAN,
+	BOX,
 	HIT,
 	ALL
 };
